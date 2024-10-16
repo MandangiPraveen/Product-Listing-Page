@@ -4,7 +4,6 @@
   box-sizing: border-box;
   text-align: center;
   justify-content: center;
- 
 }
 
 body {
@@ -92,9 +91,8 @@ body {
 .navbar{
   display: flex;
   height: 3rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  margin-top:50px;
 }
 
 .nav-items{
@@ -102,7 +100,6 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin: 10px;
 }
 
 .icons_container1{

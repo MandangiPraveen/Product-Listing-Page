@@ -6,6 +6,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 import ProductList from './ProductList';
 import Categories from './Categories';
 import basicOps from './utility/basicOps';
+import { usePaginationContext } from './utility/PaginationContext';
 
 
 
@@ -17,8 +18,9 @@ function Home() {
     const [currCategory,setCurrCategory] = useState("All Categories")
 
     
-    const [pageSize,setPageSize] = useState(5);
-    const [pageNum, setPageNum] = useState(1);
+    const { pageSize,pageNum,
+        setPageNum,
+        setPageSize } = usePaginationContext();
     
     
     useEffect(()=>{
@@ -50,20 +52,27 @@ function Home() {
                     className="search_input"
                     type='text'
                     value={searchTerm}
-                    onChange={(e)=>{setSearchTerm(e.target.value)}}
+                    onChange={(e)=>{setSearchTerm(e.target.value)
+                        setPageNum(1);
+                    }}
                 />
                 <div className='icons_container'>
                 <FaCircleArrowUp className='icons_container1' style={{color:"white"}} fontSize="large" 
-                onClick={()=>{setSortDir(1)}}></FaCircleArrowUp>
+                onClick={()=>{setSortDir(1)
+                    setPageNum(1);
+                }}></FaCircleArrowUp>
                 
                 <FaCircleArrowDown className='icons_container1' style={{color:"white"}}fontSize="large" 
-                onClick={()=>{setSortDir(-1)}}></FaCircleArrowDown>
+                onClick={()=>{setSortDir(-1)
+                    setPageNum(1);
+                }}></FaCircleArrowDown>
                 </div>
             </div>
 
             <div className="catagories_wrapper">
                 <Categories categories={categories}
-                            setCurrCategory={setCurrCategory}></Categories>
+                            setCurrCategory={setCurrCategory}
+                            setPageNum={setPageNum}></Categories>
             </div>
             
         </header>

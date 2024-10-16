@@ -8,13 +8,16 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-d
 import './App.css'
 import Cart from './PageItems/Cart'
 import Profile from './PageItems/Profile'
+import PaginationProvider from './PageItems/utility/PaginationContext'
+
 
 function App() {
 
   return (
-    <>
-      <NavBar></NavBar>
+    <PaginationProvider>
+      
       <Router>
+      <NavBar></NavBar>
         <Routes>
           <Route path="/" element={<Home></Home>}></Route>
           <Route path="/cart" element={<Cart></Cart>}></Route>
@@ -24,7 +27,7 @@ function App() {
           <Route path="*" element={<PageNotFound></PageNotFound>}></Route>
         </Routes>
       </Router>
-    </>
+    </PaginationProvider>
   )
 }
 
