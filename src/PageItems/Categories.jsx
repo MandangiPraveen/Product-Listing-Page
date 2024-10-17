@@ -9,10 +9,10 @@ function Categories(props) {
             <button className="category_option" 
                 onClick = { ()=> {setCurrCategory("All Categories") 
                                  setPageNum(1);
-                 } }>
+                 } } >
                      All Categories</button>
                 {categories.map((category)=>{
-                    return <button 
+                    return <button key={category}
                     className="category_option"
                     onClick={()=>{
                         setCurrCategory(category);
