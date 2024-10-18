@@ -11,6 +11,7 @@ body {
 .nav_wrapper {
   background-color: grey;
   height: 4rem;
+  width: 100vw;
 }
 .search_sortWrapper{
   display: flex;
@@ -33,8 +34,8 @@ body {
 .catagories_wrapper{
   background-color: rgb(226,218,218);
   height: 3rem;
-  padding-right: 1rem;
-  padding-left: 1rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -49,10 +50,10 @@ body {
   color: black;
   height: 60%;
   width: 15vw;
+  border-width: 2px;
   border-radius: 10px;
   background-color: transparent;
   border-color: aliceblue;
-  box-shadow: black;
 }
 
 .product_wrapper {
