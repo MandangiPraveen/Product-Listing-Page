@@ -6,8 +6,10 @@ import { BiHome } from "react-icons/bi";
 import { useSelector } from 'react-redux';
 
 
+
 function NavBar() {
-  const quantity = useSelector((store)=> {return store.cartReducer.catrQuantity });
+  //const quantity = useSelector((store)=> {return store.cartReducer.catrQuantity });
+  const quantity = useSelector((store) => store.cartReducer.cartQuantity);
   return (
     <div className='navbar'>
       <Link to="/">
@@ -23,7 +25,7 @@ function NavBar() {
       <Link to="/cart">
         <div className="cart_container">
         <BsCart3 fontSize='large'/>
-        <div className="cart_quantity">0</div>
+        <div className="cart_quantity">{quantity}</div>
         </div>
         
       </Link>
