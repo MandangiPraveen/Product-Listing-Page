@@ -26,8 +26,8 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-width: 375px;
+  min-height: 667px;
 }
 
 h1 {
@@ -52,7 +52,7 @@ button:hover {
 
 .container {
   width: 100vw;
-  height: 100%;  
+  height: 100vh;  
   border: 1px solid #ccc;  
   overflow: auto;
   text-align: center;
@@ -68,10 +68,6 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
-  .container {
-    width: 100%;
-    height: 100vh;
-}
 
   a:hover {
     color: #747bff;
