@@ -1,4 +1,3 @@
-
 import NavBar from './PageItems/NavBar'
 import Home from './PageItems/Home'
 import ProductDetails from './PageItems/ProductDetails'

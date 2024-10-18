@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux';
 
 
 function NavBar() {
-  //const quantity = useSelector((store)=> {return store.cartReducer.catrQuantity });
   const quantity = useSelector((store) => store.cartReducer.cartQuantity);
   return (
     <div className='navbar'>

@@ -55,6 +55,7 @@ button:hover {
   height: 300px;  
   border: 1px solid #ccc;  
   overflow: auto;
+  text-align: center;
 }
 
 button:focus,
